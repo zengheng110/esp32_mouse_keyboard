@@ -1,0 +1,19 @@
+# Override some defaults so BT stack is enabled
+# by default in this example
+CONFIG_BT_ENABLED=y
+
+# ESP32-C3: BLE only, no BR/EDR (auto-detected by IDF)
+
+# automatic flash size detection
+CONFIG_ESPTOOLPY_HEADER_FLASHSIZE_UPDATE=y
+
+# enable all HID interfaces by default
+CONFIG_MODULE_USEKEYBOARD=y
+CONFIG_MODULE_USEMOUSE=y
+CONFIG_MODULE_USEJOYSTICK=y
+
+# ESP32-C3-DevKit pin config: UART1, RX=GPIO5, TX=GPIO4, LED=GPIO2
+CONFIG_MODULE_RX_PIN=5
+CONFIG_MODULE_TX_PIN=4
+CONFIG_MODULE_LED_PIN=2
+CONFIG_MODULE_UART_NR=1
